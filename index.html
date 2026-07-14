@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>كشف تسريبات المياه بالأحساء</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- TikTok Pixel Code Start -->
+  <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+      ttq.load('D6GE00JC77UAAN00B030');
+      ttq.page();
+    }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg1:   #0b1c3a;
+      --bg2:   #0d3347;
+      --gold:  #f5c842;
+      --gold2: #e6a800;
+      --blue:  #1a6fcf;
+      --blue2: #1559a8;
+      --green: #25d366;
+      --green2:#1aab52;
+      --row-bg:#f4f8ff;
+      --text:  #1a2a3a;
+      --muted: #7a90a8;
+      --radius:20px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(155deg, var(--bg1) 0%, var(--bg2) 100%);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 20px 12px 100px;
+    }
+
+    /* ── CARD ── */
+    .card {
+      width: 100%;
+      max-width: 460px;
+      background: #fff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 16px 60px rgba(0,0,0,.45);
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: linear-gradient(160deg, #0b1c3a 0%, #0e3350 100%);
+      padding: 30px 22px 26px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(26,111,207,.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.22);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 18px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 8px;
+      position: relative;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .location-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 18px;
+      border-radius: 30px;
+      position: relative;
+    }
+
+    /* ── OFFER BANNER ── */
+    .offer-wrap { padding: 16px 16px 0; }
+
+    .offer-banner {
+      background: linear-gradient(135deg, #e6a800 0%, var(--gold) 100%);
+      border-radius: 14px;
+      padding: 16px 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(245,200,66,.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .offer-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(-45deg,
+        rgba(255,255,255,.06) 0, rgba(255,255,255,.06) 8px,
+        transparent 8px, transparent 16px);
+    }
+
+    .offer-main {
+      font-size: 15px;
+      font-weight: 900;
+      color: #3a2200;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    .offer-sub {
+      font-size: 12px;
+      color: rgba(58,34,0,.65);
+      font-weight: 600;
+      position: relative;
+    }
+
+    /* ── SECTION ── */
+    .section { padding: 20px 16px 0; }
+
+    .sec-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 12px;
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .sec-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--blue);
+      flex-shrink: 0;
+    }
+
+    /* ── SERVICE ROWS ── */
+    .service-rows { display: flex; flex-direction: column; gap: 8px; }
+
+    .svc-row {
+      background: var(--row-bg);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid rgba(26,111,207,.1);
+      transition: transform .18s, box-shadow .18s;
+    }
+
+    .svc-row:hover {
+      transform: translateX(-3px);
+      box-shadow: 0 4px 16px rgba(26,111,207,.12);
+    }
+
+    .svc-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      flex: 1;
+      text-align: right;
+    }
+
+    .svc-text small {
+      display: block;
+      font-size: 11.5px;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .svc-icon-wrap {
+      width: 42px; height: 42px;
+      min-width: 42px;
+      border-radius: 50%;
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+
+    /* ── FEATURES GRID ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .feat-card {
+      background: var(--row-bg);
+      border-radius: 12px;
+      padding: 16px 12px;
+      text-align: center;
+      border: 1px solid rgba(26,111,207,.1);
+      transition: transform .18s;
+    }
+
+    .feat-card:hover { transform: translateY(-2px); }
+    .feat-icon { font-size: 26px; margin-bottom: 8px; display: block; }
+    .feat-text { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.35; }
+
+    /* ── CONTACT ── */
+    .contact-wrap {
+      margin: 20px 16px 0;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      border-radius: 16px;
+      padding: 22px 18px;
+      text-align: center;
+    }
+
+    .contact-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(255,255,255,.45);
+      margin-bottom: 8px;
+    }
+
+    .contact-number {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--gold);
+      letter-spacing: 1.5px;
+      direction: ltr;
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    .contact-btns { display: flex; gap: 10px; }
+
+    .cbtn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 13px 10px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      font-family: 'Tajawal', sans-serif;
+      transition: transform .18s, filter .18s;
+    }
+
+    .cbtn:active { transform: scale(.96); }
+    .cbtn:hover  { filter: brightness(1.08); }
+
+    .cbtn-call {
+      background: linear-gradient(135deg, var(--blue2), var(--blue));
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(26,111,207,.4);
+    }
+
+    .cbtn-wa {
+      background: linear-gradient(135deg, var(--green2), var(--green));
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(37,211,102,.35);
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      padding: 18px 16px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(26,111,207,.08);
+      margin-top: 20px;
+    }
+
+    .footer-copy { font-size: 11.5px; color: var(--muted); margin-bottom: 5px; }
+    .designer-link { color: var(--blue); font-weight: 700; text-decoration: none; }
+    .designer-link:hover { text-decoration: underline; }
+
+    /* ── SIDE FLOATING BUTTONS ── */
+    .side-btns {
+      position: fixed;
+      left: 14px;
+      bottom: 110px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 999;
+    }
+
+    .side-btn {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(0,0,0,.3);
+      transition: transform .2s;
+    }
+
+    .side-btn:hover  { transform: scale(1.1); }
+    .side-btn:active { transform: scale(.93); }
+
+    .side-wa   { background: linear-gradient(135deg, var(--green2), var(--green)); }
+    .side-call { background: linear-gradient(135deg, var(--blue2), var(--blue)); }
+
+    /* ── BOTTOM BAR ── */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: #fff;
+      border-top: 1px solid rgba(26,111,207,.15);
+      padding: 10px 14px;
+      display: flex;
+      gap: 10px;
+      z-index: 999;
+      box-shadow: 0 -4px 20px rgba(0,0,0,.1);
+    }
+
+    .bar-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 13px 8px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      font-family: 'Tajawal', sans-serif;
+      transition: transform .18s, filter .18s;
+    }
+
+    .bar-btn:active { transform: scale(.96); }
+    .bar-btn:hover  { filter: brightness(1.07); }
+
+    .bar-wa {
+      background: linear-gradient(135deg, var(--green2), var(--green));
+      color: #fff;
+      box-shadow: 0 3px 12px rgba(37,211,102,.3);
+    }
+
+    .bar-call {
+      background: linear-gradient(135deg, var(--blue2), var(--blue));
+      color: #fff;
+      box-shadow: 0 3px 12px rgba(26,111,207,.3);
+    }
+
+    @media (min-width: 600px) {
+      .bottom-bar { max-width: 460px; left: 50%; transform: translateX(-50%); border-radius: 16px 16px 0 0; }
+      .side-btns  { left: calc(50% - 270px); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="badge">✅ فريق لدي متخصص معتمد</div>
+      <h1 class="title">كشف تسريبات المياه</h1>
+      <div class="subtitle">حل مشكلة ارتفاع فاتورة المياه نهائياً</div>
+      <div class="location-pill">📍 يخدم جميع أحياء الأحساء</div>
+    </div>
+
+    <!-- OFFER BANNER -->
+    <div class="offer-wrap">
+      <div class="offer-banner">
+        <div class="offer-main">🔥 عرض خاص لفترة محدودة على الكشف والعزل</div>
+        <div class="offer-sub">اتصل الآن واحصل على السعر المناسب لك</div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="section">
+      <div class="sec-title">
+        خدماتنا
+        <div class="sec-dot"></div>
+      </div>
+
+      <div class="service-rows">
+        <div class="svc-row">
+          <div class="svc-text">
+            كشف تسريبات المياه بأحدث الأجهزة الإلكترونية
+            <small>تحديد دقيق للتسريب بدون تكسير</small>
+          </div>
+          <div class="svc-icon-wrap">💧</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-text">
+            عزل الأسطح ضد الحرارة والمياه
+            <small>حماية كاملة من التسرب والرطوبة</small>
+          </div>
+          <div class="svc-icon-wrap">🏠</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-text">
+            عزل الحمامات والمطابخ
+            <small>عزل مائي احترافي ودائم</small>
+          </div>
+          <div class="svc-icon-wrap">🚿</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-text">
+            عزل خزانات المياه
+            <small>تنظيف وعزل لضمان نقاء المياه</small>
+          </div>
+          <div class="svc-icon-wrap">🪣</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-text">
+            جميع أنواع العوازل (حراري - مائي - فوم)
+            <small>عوازل معتمدة وذات جودة عالية</small>
+          </div>
+          <div class="svc-icon-wrap">🧱</div>
+        </div>
+        <div class="svc-row">
+          <div class="svc-text">
+            صيانة وإصلاح التسريبات بدون تكسير
+            <small>حلول سريعة ونهائية</small>
+          </div>
+          <div class="svc-icon-wrap">🔧</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="section">
+      <div class="sec-title">
+        لماذا تختارنا؟
+        <div class="sec-dot"></div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feat-card">
+          <span class="feat-icon">🏅</span>
+          <div class="feat-text">ضمان على العمل</div>
+        </div>
+        <div class="feat-card">
+          <span class="feat-icon">⚡</span>
+          <div class="feat-text">سرعة في التنفيذ</div>
+        </div>
+        <div class="feat-card">
+          <span class="feat-icon">💰</span>
+          <div class="feat-text">أسعار مناسبة</div>
+        </div>
+        <div class="feat-card">
+          <span class="feat-icon">🚫</span>
+          <div class="feat-text">بدون تكسير</div>
+        </div>
+        <div class="feat-card">
+          <span class="feat-icon">📞</span>
+          <div class="feat-text">تواصل سهل وسريع</div>
+        </div>
+        <div class="feat-card">
+          <span class="feat-icon">👷</span>
+          <div class="feat-text">فنيون محترفون</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-wrap">
+      <div class="contact-label">📞 رقم التواصل المباشر</div>
+      <span class="contact-number">0579342911</span>
+      <div class="contact-btns">
+        <a href="tel:0579342911" class="cbtn cbtn-call" id="cbtn-call">
+          📞 اتصل الآن
+        </a>
+        <a href="https://wa.me/966579342911?text=%D8%A3%D9%87%D9%84%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20الاستفسار%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D9%83%D8%B4%D9%81%20%D8%AA%D8%B3%D8%B1%D9%8A%D8%A8%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%8A%D8%A7%D9%87"
+           class="cbtn cbtn-wa" id="cbtn-wa"
+           target="_blank" rel="noopener">
+          💬 واتساب
+        </a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="footer-copy">© 2025 جميع الحقوق محفوظة — كشف تسريبات المياه بالأحساء</div>
+      <div style="font-size:12.5px; color:#7a90a8;">
+        تم التصميم بواسطة
+        <a class="designer-link" href="https://wa.me/201029095046" target="_blank" rel="noopener">م. نجوي إبراهيم</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SIDE BUTTONS -->
+  <div class="side-btns">
+    <a href="https://wa.me/966579342911?text=%D8%A3%D9%87%D9%84%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20الاستفسار%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D9%83%D8%B4%D9%81%20%D8%AA%D8%B3%D8%B1%D9%8A%D8%A8%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%8A%D8%A7%D9%87"
+       class="side-btn side-wa" id="side-wa" target="_blank" rel="noopener">💬</a>
+    <a href="tel:0579342911" class="side-btn side-call" id="side-call">📞</a>
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="bottom-bar">
+    <a href="https://wa.me/966579342911?text=%D8%A3%D9%87%D9%84%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20الاستفسار%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A9%20%D9%83%D8%B4%D9%81%20%D8%AA%D8%B3%D8%B1%D9%8A%D8%A8%D8%A7%D8%AA%20%D8%A7%D9%84%D9%85%D9%8A%D8%A7%D9%87"
+       class="bar-btn bar-wa" id="bar-wa" target="_blank" rel="noopener">
+      💬 تواصل واتساب
+    </a>
+    <a href="tel:0579342911" class="bar-btn bar-call" id="bar-call">
+      📞 اتصل الآن
+    </a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Entrance animation
+      var card = document.querySelector('.card');
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(22px)';
+      card.style.transition = 'opacity .5s ease, transform .5s ease';
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        });
+      });
+
+      // Stagger rows & cards
+      document.querySelectorAll('.svc-row, .feat-card').forEach(function (el, i) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateX(10px)';
+        el.style.transition = 'opacity .35s ease ' + (0.1 + i * 0.055) + 's, transform .35s ease ' + (0.1 + i * 0.055) + 's';
+        setTimeout(function () {
+          el.style.opacity = '1';
+          el.style.transform = 'translateX(0)';
+        }, 80);
+      });
+
+      // TikTok Pixel — Contact events
+      function fireContact(method) {
+        if (typeof ttq !== 'undefined') {
+          ttq.track('Contact', { content_name: method });
+        }
+      }
+
+      ['cbtn-call', 'side-call', 'bar-call'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener('click', function () { fireContact('call'); });
+      });
+
+      ['cbtn-wa', 'side-wa', 'bar-wa'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener('click', function () { fireContact('whatsapp'); });
+      });
+
+    });
+  </script>
+
+</body>
+</html>
